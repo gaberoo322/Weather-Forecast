@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+    <h1>Weather Forecast</h1>
+    <p>Get the 5 day forecast from anywhere in the world</p>
+    <form class="form-group" (ngSubmit)="onGetForecast(f)" #f="ngForm">
+      <div>
+        <input class="form-group" type="text" placeholder="Enter City Name" name="city" ngModel/>
+      </div>
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    <div>
+      <div class="list-group" *ngIf="forecast">
+        <div *ngFor="let listItem of forecast.list">
+          <div class="list-group-item">
+            <p>{{ (9/5*(listItem.main.temp-273.15)+32) + " Fahrenheit" }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>Loading...</main>
+  </div>
