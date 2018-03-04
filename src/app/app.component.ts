@@ -16,18 +16,18 @@ export class AppComponent {
   city;
 
   constructor(private weatherService: WeatherService) { };
-  
+
 
   onGetForecast(form: NgForm) {
-    this.weatherService.getForecast(form.controls.city.value)
-    .subscribe(
-      (response) => {
-        this.forecast = response.json();
-        console.log(this.forecast);
-      },
-      (error) => {
-        console.log("Error")
-      }
-    )
-  };
+    this.weatherService.getForecast(form.controls.city.value, form.controls.zip.value, form)
+      .subscribe(
+        (response) => {
+          this.forecast = response.json();
+          // console.log(this.forecast);
+        },
+        (error) => {
+          // console.log("Error")
+        }
+      )
+  }
 }
