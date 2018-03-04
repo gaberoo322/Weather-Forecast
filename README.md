@@ -1,8 +1,8 @@
 # WeatherForecast
 
- Weather data from https://openweathermap.org/api
- Search to get data for any given zip code or city
- Chart the 5 day forecast
+Weather data is from https://openweathermap.org/api.\n
+Search to get data for any given zip code or city.\n
+read chart of the 5 day forecast.\n
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
 
